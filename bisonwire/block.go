@@ -63,7 +63,7 @@ func (b *Block) BtcDecode(r io.Reader, pver uint32, enc wire.MessageEncoding) er
 	case "ltc":
 		blk, err := deserializeLitecoinBlock(r)
 		if err != nil {
-			return fmt.Errorf("error decoding Bitcoin block: %w", err)
+			return fmt.Errorf("error decoding Litecoin Bitcoin block: %w", err)
 		}
 		b.Header = blk.Header
 		b.Transactions = blk.Transactions
